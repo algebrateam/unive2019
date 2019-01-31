@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/w/', function () {
+    return "Heloo ja sam prva GET ruta!";
+});
+Route::get('/{ime}', function ($ime) {
+    return "Dobrodoslaaaa ".$ime;
+});
