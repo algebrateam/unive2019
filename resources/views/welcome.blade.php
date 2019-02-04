@@ -80,11 +80,19 @@
             @endif
 
             <div class="content">
+              <div class="links">
+            
+ 
+@isset($name)
+ {{$name}}
+@endisset
+              </div>
                 <div class="title m-b-md">
                     Laravel
                 </div>
 
                 <div class="links">
+                  <a href="{{ route('probna') }}">Idi na probnu</a>
                     <a href="https://laravel.com/docs">Documentation</a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>

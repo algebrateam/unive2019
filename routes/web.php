@@ -14,9 +14,20 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::view('/welcome','welcome', ['name' => '1Taylor'])
+  ->where('name', '[A-Za-z]+')
+  ->name('wilcommen');
 Route::get('/w/', function () {
     return "Heloo ja sam prva GET ruta!";
 });
-Route::get('/{ime}', function ($ime) {
+Route::get('/pozdrav/{ime?}', function ($ime='marica') {
     return "Dobrodoslaaaa ".$ime;
+})
+  ->where('ime', '[A-Za-z]+[1-9]');
+Route::get('/probna/','probniController@probnaFunkcija')
+  ->name('probna');
+
+Route::redirect('/here', '/there');
+Route::get('/there', function () {
+    return "ja sam redirektan sa route here";
 });
