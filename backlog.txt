@@ -1,0 +1,8 @@
+- kreirati modele dvorana
+-ispit
+-nastavnik
+-mjesto
+-zupanija
+
+
+
