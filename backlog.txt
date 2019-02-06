@@ -3,6 +3,8 @@
 -nastavnik
 -mjesto
 -zupanija
-
-
-
+//- predmet
+- kreirati view za predmet
+- kreirati CRUD za predmet
+- 
+postaviti relaciju dvorana-rezervacija-predmet
