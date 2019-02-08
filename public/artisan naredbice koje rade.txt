@@ -1,3 +1,5 @@
+App\Predmet::select('id')->orderByRaw('RAND()')->first()->id;
+php artisan db:seed --class=RezervacijasTableSeeder
 mysql -u root -p
 create database unive
 php artisan migrate:refresh --seed

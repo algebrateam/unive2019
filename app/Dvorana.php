@@ -11,6 +11,6 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Dvorana extends Model
 {
-   protected $primaryKey = 'id';
-   protected $table='dvoranas';
+   protected $primaryKey = 'id';  // opcija, po defaultu je "id"
+   protected $table='dvoranas';  // opcija po defaultu "Dvorana" -> "dvoranas"
 }

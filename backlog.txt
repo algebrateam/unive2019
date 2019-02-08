@@ -7,4 +7,6 @@
 - kreirati view za predmet
 - kreirati CRUD za predmet
 - 
-postaviti relaciju dvorana-rezervacija-predmet
+- postaviti relaciju dvorana-rezervacija-predmet
+- admin panel gui
+
