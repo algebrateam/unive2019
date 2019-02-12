@@ -31,7 +31,7 @@ before_script:
 script:
   #- vendor/bin/phpunit --debug --bootstrap vendor/autoload.php tests/
   - vendor/bin/phpunit --debug --bootstrap vendor/autoload.php --configuration ./phpunit.xml
-  - php artisan dusk
+  #- php artisan dusk
   
 deploy:
   provider: pages

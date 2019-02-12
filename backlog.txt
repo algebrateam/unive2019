@@ -9,5 +9,5 @@
 - 
 - postaviti relaciju dvorana-rezervacija-predmet
 - admin panel gui
-- heroku
+//- heroku
 
