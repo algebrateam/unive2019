@@ -23,6 +23,10 @@ class PredmetController extends Controller
 //         echo '</ul>';
          return view('predmet.index', compact('predmets'));
     }
+    public function top10() {
+     $predmets=Predmet::orderBy('upisanostud', 'desc')->take(10)->get();
+      return view('childprimjer', compact('predmets'));
+    }
 
     /**
      * Show the form for creating a new resource.
