@@ -98,7 +98,7 @@ class PredmetController extends Controller {
    * @return Response
    */
   public function edit(Predmet $predmet) {
-    //
+   return view('predmet.edit', ['predmet' => $predmet]);
   }
 
   /**

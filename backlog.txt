@@ -12,5 +12,7 @@
 //- heroku
 - paging
 - with
+-- na delete metodu predmeti dodaj konfirmaciju
+-postaviti multilevel navigaciju na config/adminlte menu
 
 
