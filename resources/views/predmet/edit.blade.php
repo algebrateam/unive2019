@@ -21,34 +21,37 @@
     </div>
 @endif
 <?php
-dd($predmet);
+//dd($predmet);
 ?>
-<form method="POST" action="/predmets">  
+<form method="POST" action="/predmets/{{ $predmet->id }}">  
   @csrf
+  <input type="hidden" name="_method" value="PUT">
   <div class="form-group">
+      <label for="id"> *id:</label>
+            {{$predmet->id}}<br>
     <label for="kratpred">Kratica predmeta:</label>
     <input maxlength="8" type="text" name="kratpred" 
-           value="{{ old('kratpred') }}"><br>
+           value="{{ $predmet->kratpred }}"><br>
     
     <label for="nazpred"> Naziv predmeta *:</label>
-    <input maxlength="60" type="text" name="nazpred"  required="true" value="{{ old('nazpred') }}"><br>
+    <input maxlength="60" type="text" name="nazpred"  required="true" value="{{ $predmet->nazpred }}"><br>
     
     <label for="siforgjed"> Šifra organizacijske jedinice:</label>
     <input min="100000" max="100020" type="number" name="siforgjed"
-           value="{{ old('siforgjed') }}"><br>
+           value="{{ $predmet->siforgjed }}"><br>
 
     <label for="upisanostud"> Upisano studenata:</label>
     <input min="0" max="100" type="number" name="upisanostud" 
-           value="{{ old('upisanostud') }}"><br>
+           value="{{ $predmet->upisanostud }}"><br>
 
     <label for="brojsatitjedno">Broj sati tjedno:</label>
     <input min="1" max="16" type="number" name="brojsatitjedno" 
-           value="{{ old('brojsatitjedno') }}"><br>    
+           value="{{ $predmet->brojsatitjedno }}"><br>    
     
 
   </div>
   <div class="form-group">
-    <input type="submit" name="novi_predmet_sbm" value="Dodaj novi predmet">
+    <input type="submit" name="uredi_predmet_sbm" value="Uredi predmet">
   </div>
 </form>  
 

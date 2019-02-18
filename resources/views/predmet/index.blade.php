@@ -19,7 +19,7 @@
   <li>
     <a href='{{url("/predmets/{$p->id}/edit")}}'><span class="label label-info">Edit</span></a>
     
-    <form action='{{url("/predmets/{$p->id}")}}' method='POST' style="display: inline">
+    <form id="deleteform" name="deleteform"  action='{{url("/predmets/{$p->id}")}}' method='POST' style="display: inline" class="form-delete">
       @csrf
       <input type='hidden' name='_method' value='DELETE'>
       <button type='submit' name='delete_predmet' value='delete' class="btn btn-warning btn-xs"> delete</button>
@@ -39,5 +39,25 @@
 @stop
 
 @section('js')
+<script>
+//onsubmit= 'return ConfirmDelete()'
+  function ConfirmDelete()
+  {
+  var x = confirm("Siguran si da želiš obrisati predmet?");
+  if (x)
+    return true;
+  else
+    return false;
+  }
+  $('deleteform').on('click', '.form-delete', function(e){
+    e.preventDefault();
+    var $form=$(this);
+    $('#confirm').modal({ backdrop: 'static', keyboard: false })
+        .on('click', '#delete-btn', function(){
+            $form.submit();
+        });
+});
+
+</script>
 <script> console.log('Hi!');</script>
 @stop
