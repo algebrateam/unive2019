@@ -17,7 +17,8 @@ class PredmetController extends Controller {
    * @return Response
    */
   public function index() {
-    $predmets = Predmet::all();
+   // $predmets = Predmet::all();
+   $predmets = Predmet::paginate(15);
     //dd($predmets);
 //         echo '<ul>';
 //         foreach ($predmets as $key => $p) {
