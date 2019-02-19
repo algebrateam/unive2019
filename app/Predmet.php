@@ -11,3 +11,5 @@ class Predmet extends Model
         return $this->hasMany('App\Rezervacija');
     }
 }
+// Primjer tinker koji radi
+// App\Predmet::select('id')->orderByRaw('RAND()')->first()->id;

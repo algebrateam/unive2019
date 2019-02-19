@@ -14,7 +14,7 @@ class PredmetTest extends TestCase
      *
      * @return void
      */
-    public function testExample()
+    public function testPredmetKojiNemajuRezervaciju()
     {
       $p1= Predmet::doesnthave('rezervacije')->count();
       $p2= Predmet::with('rezervacije')->count();
@@ -29,5 +29,13 @@ class PredmetTest extends TestCase
       $this->assertGreaterThanOrEqual(1, $p3, 'Nema barem 1 predmeta sa rezervacijama');
       
       $this->assertTrue(true);
+    }
+    
+    /**
+     * Pokušamo putem modela Predmet izlistati sve njegove rezervacije
+     */
+    public function testPredmetDoRezervacije() {
+      $brojRezervacija= Predmet::first()->rezervacije()->get()->count();
+      $this->assertGreaterThanOrEqual(0, $brojRezervacija, 'Veza predmet na rezervacije nije uspjela, provjeri belongsTo i HasMany !');
     }
 }
