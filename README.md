@@ -10,3 +10,10 @@ https://travis-ci.org/algebrateam/unive2019
 ## Project deployed on HEROKU
 http://unive2019.herokuapp.com/predmets
 
+## Sinhronizacija sa master repo (pregazi lokalne promjene)
+git remote add upstream https://github.com/algebrateam/unive2019.git
+git fetch upstream master
+git reset --hard FETCH_HEAD
+git clean -df
+
+
