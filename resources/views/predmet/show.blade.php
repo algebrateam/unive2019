@@ -22,7 +22,7 @@ Link na ovu stranicu:<a href='{{url("/predmets/{$predmet->id}")}}'> {{$predmet->
 <hr>
 Kratica predmeta: <span class="badge badge-info">{{$predmet->kratpred }}</span><br>
 Upisano studenata: <span class="badge badge-warning">{{$predmet->upisanostud }}</span><br>
-Broj sati tjedno: <span class="badge badge-success">{{$predmet->brojsatitjedno }}</span><br>
+Broj <i class="far fa-clock"></i> tjedno: <span class="badge badge-success">{{$predmet->brojsatitjedno }}</span><br>
 Broj rezervacija: <span class="badge badge-success">
   {{$predmet->rezervacije()->get()->count() }}</span><br>
 
@@ -39,6 +39,7 @@ Broj rezervacija: <span class="badge badge-success">
 
 @section('css')
 <link rel="stylesheet" href="/css/admin_custom.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
 @stop
 
 @section('js')
