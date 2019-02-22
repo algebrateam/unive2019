@@ -10,12 +10,12 @@
 - postaviti relaciju dvorana-rezervacija-predmet
 // - admin panel gui
 //- heroku
-- paging
+//- paging
 - with
 //- na delete metodu predmeti dodaj konfirmaciju
 // - test dohvati predmet preko rezervacije
 // - test dohvati rezervaciju preko predmeta
--postaviti multilevel navigaciju na config/adminlte menu
-- prikazi rezervacije za predmet na view show
+- postaviti multilevel navigaciju na config/adminlte menu
+//- prikazi rezervacije za predmet na view show
 
 
