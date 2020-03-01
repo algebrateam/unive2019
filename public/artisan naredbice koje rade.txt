@@ -1,0 +1,38 @@
+
+
+
+App\Predmet::select('id')->orderByRaw('RAND()')->first()->id;
+php artisan db:seed --class=RezervacijasTableSeeder
+mysql -u root -p
+create database unive
+php artisan migrate:refresh --seed
+php artisan make:seeder UsersTableSeeder
+
+php artisan tinker
+$p=new Predmet;
+>>> $p->all()->take(2);
+=> Illuminate\Database\Eloquent\Collection {#2931
+     all: [
+       App\Predmet {#3320
+         id: 1,
+         kratpred: "ZRS01A1",
+         nazpred: "Adaptivno i robusno upravljanje",
+         siforgjed: 100008,
+         upisanostud: 0,
+         brojsatitjedno: 3,
+         created_at: null,
+         updated_at: null,
+       },
+       App\Predmet {#3321
+         id: 2,
+         kratpred: "ZRS02A1",
+         nazpred: "Alarmni sustavi",
+         siforgjed: 100008,
+         upisanostud: 5,
+         brojsatitjedno: 2,
+         created_at: null,
+         updated_at: null,
+       },
+     ],
+   }
+>>>   
